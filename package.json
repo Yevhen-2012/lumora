@@ -1,0 +1,12 @@
+{
+  "name": "lumora",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/localize.mjs --apply && node scripts/package.mjs",
+    "check": "node scripts/check.mjs",
+    "start": "node scripts/serve.mjs",
+    "prepare-media": "node scripts/localize.mjs"
+  }
+}

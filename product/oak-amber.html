@@ -1,0 +1,242 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Thu Sep 24 2026 10:55:31 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="6994966d8f5eceaeb98e4c90" data-wf-site="6994966b8f5eceaeb98e4bd7" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Oak &amp; Amber | Lumora</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../css/e-comerce-cms.webflow.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="../images/favicon.png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: light)">
+  <link href="../images/favicon-dark.png" rel="icon" type="image/png" sizes="32x32" media="(prefers-color-scheme: dark)">
+  <link href="../images/favicon-48.png" rel="icon" type="image/png" sizes="48x48">
+  <link href="../images/webclip-180.webp" rel="apple-touch-icon" sizes="180x180">
+  <link href="../images/webclip-192.webp" rel="icon" type="image/png" sizes="192x192">
+  <link href="../images/webclip.webp" rel="icon" type="image/png" sizes="512x512">
+<link rel="stylesheet" href="../css/catalogue.css"></head>
+<body>
+  <div class="global-css-styles w-embed">
+    <style>
+ .product-wrapper-item {
+    /* Regular items */
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: calc((100% - (4 * 16px)) / 6); /* Adjusted for 6 item spaces */
+}
+/* Selecting the 3rd, 5th, 7th, and 9th items specifically */
+.product-wrapper-item:nth-child(3),
+.product-wrapper-item:nth-child(5),
+.product-wrapper-item:nth-child(7),
+.product-wrapper-item:nth-child(9) {
+    /* 'Large' items */
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: calc(((100% - (4 * 16px)) / 6) * 1.5); /* 1.5 times a regular item */
+}
+  .truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines you want */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	}
+  .select-field {
+  	/* Styling the Webflow default dropdown arrow*/
+    -webkit-appearance: none; /* For Chrome, Safari, and Opera */
+    -moz-appearance: none;    /* For Firefox */
+    appearance: none;         /* Standard syntax */
+    background-image: url('../assets/imported/fd5d3d208abf-65758c0babe35789fbfd9897_Chevron--down.svg');
+    background-position: right 12px center; /* 12px from the right and vertically centered */
+		background-repeat: no-repeat;
+    background-size: 8px; /* Width of the arrow */
+    padding-right: 20px; /* Make sure to add padding to prevent the arrow from overlapping the text */
+	}
+  option {
+      background-color: #f0f0f0;
+      color: #333;
+      /* More styles */
+  }
+/* Mobile View */
+@media (max-width: 768px) {
+    .product-wrapper-item {
+        /* Adjust for 2-column layout */
+        flex-basis: calc((100% - 16px) / 2); /* 1 gap in a row, divided by 2 */
+    }
+    /* Reset the styles for 'large' items on mobile */
+    .product-wrapper-item:nth-child(3),
+    .product-wrapper-item:nth-child(5),
+    .product-wrapper-item:nth-child(7),
+    .product-wrapper-item:nth-child(9) {
+        flex-basis: calc((100% - 16px) / 2); /* Same as regular items on mobile */
+    }
+}
+</style>
+  </div>
+  <div class="menu">
+    <a href="../index.html" class="menu-logo w-inline-block"><img src="../images/logo_1.svg" loading="lazy" width="Auto" height="50" alt="" class="logo-image"></a>
+    <div class="desktop-navigation">
+      <div class="menu-navigation">
+        <a href="../shop.html" class="navigation-link w-inline-block">
+          <div>Shop </div>
+        </a>
+        <a href="../collections.html" class="navigation-link w-inline-block">
+          <div>Collections</div>
+        </a>
+        <a href="../journal.html" class="navigation-link w-inline-block">
+          <div>Journal</div>
+        </a>
+        <a href="../about.html" class="navigation-link w-inline-block">
+          <div>About</div>
+        </a>
+        <div class="w-commerce-commercecartwrapper cart"><a class="w-commerce-commercecartopenlink navigation-link w-inline-block catalogue-bag" role="button" aria-disabled="true" title="Catalogue only — online checkout is unavailable">
+            <div class="w-inline-block">Bag</div>
+            <div class="w-commerce-commercecartopenlinkcount cart-quantity">0</div>
+          </a></div>
+      </div>
+    </div>
+    <a data-w-id="e66cd11a-2bdb-4d0a-fcc9-be2b105b07a1" href="#" class="mobile-menu-icon w-inline-block"><img src="../images/Menu.svg" loading="lazy" alt="" class="burger"><img src="../images/close.svg" loading="lazy" alt="" class="close-menu"></a>
+  </div>
+  <div class="mobile-menu-wrapper">
+    <div class="mobile-menu-container">
+      <div class="menu-navigation">
+        <a href="../shop.html" class="navigation-link w-inline-block">
+          <div>Shop </div>
+        </a>
+        <a href="../collections.html" class="navigation-link w-inline-block">
+          <div>Collections</div>
+        </a>
+        <a href="../journal.html" class="navigation-link w-inline-block">
+          <div>Journal</div>
+        </a>
+        <a href="../about.html" class="navigation-link w-inline-block">
+          <div>About</div>
+        </a>
+        <div class="w-commerce-commercecartwrapper cart"><a class="w-commerce-commercecartopenlink navigation-link w-inline-block catalogue-bag" role="button" aria-disabled="true" title="Catalogue only — online checkout is unavailable">
+            <div class="w-inline-block">Bag</div>
+            <div class="w-commerce-commercecartopenlinkcount cart-quantity">0</div>
+          </a></div>
+      </div>
+    </div>
+  </div>
+  <section class="section product">
+    <div class="product-page-grid">
+      <div id="w-node-f98ff4f3-d2a7-cac1-973f-e6ce546f033e-b98e4c90" class="block-sticky">
+        <div class="category-wrapper w-dyn-list">
+          <div role="list" class="category-list w-dyn-items"></div>
+          <div class="w-dyn-empty">
+            <div>No items found.</div>
+          </div>
+        </div>
+        <h1>Oak &amp; Amber</h1>
+        <p>Oak &amp; Amber blends smooth aged oakwood with warm golden amber and a touch of soft spice. Subtle smoky undertones add depth, creating a fragrance that feels rich, grounded, and quietly refined. Warm, elegant, and timeless — like candlelight against polished wood and stone walls.</p>
+        <div class="rich-text w-richtext"><p>• Hand-poured natural soy wax for a clean, even burn.<br>• Premium cotton wick for a steady, smoke-free flame.</p><p>• Size S — 120 g | Burn time: approximately 25–30 hours.<br>• Size M — 220 g | Burn time: approximately 45–50 hours.<br>• Size L — 350 g | Burn time: approximately 70–80 hours.</p><p>• Fragrance profile: aged oakwood, golden amber, soft spice, subtle smoke.<br>• Reusable matte ceramic vessel.<br>• Shipping: Ships worldwide. Delivery times vary based on location.</p><p>Crafted to bring warmth, depth, and timeless sophistication into your space. </p><p>‍</p></div>
+      </div>
+      <div id="w-node-_4bd72972-e414-4f87-d380-294bea47f68b-b98e4c90" class="product-images">
+        <div class="product-images-item"><img alt="Oak &amp; Amber" loading="lazy" src="../assets/imported/5894ff17e9d3-699fc0477abec580374dc725_Oak___Amber_1.webp" class="product-image-full"></div>
+        <div class="product-images-container w-dyn-list">
+          <div role="list" class="product-images-list w-dyn-items"><div role="listitem" class="product-images-item w-dyn-item"><img alt="Oak &amp; Amber" loading="lazy" src="../assets/imported/5e2057644662-699fc055e10c9f7725d15dd3_Oak___Amber_2.webp" class="product-image-full"></div><div role="listitem" class="product-images-item w-dyn-item"><img alt="Oak &amp; Amber" loading="lazy" src="../assets/imported/4c08e4b2663d-699fc055ba2ac4ef7092f112_Oak___Amber_3.webp" class="product-image-full"></div><div role="listitem" class="product-images-item w-dyn-item"><img alt="Oak &amp; Amber" loading="lazy" src="../assets/imported/41ed9c5de699-699fc055573ed8a2ad7445f3_Oak___Amber_4.webp" class="product-image-full"></div></div>
+          
+        </div>
+      </div>
+      <div id="w-node-d48ad1fd-b11e-7ea5-d4c7-7e6f4304c96f-b98e4c90" class="block-sticky">
+        <div class="product-text">
+          
+          <p data-variant-price="">$ 15.00 USD</p>
+        </div>
+        <div class="space _16px"></div>
+        <div class="add-to-cart"><div class="default-state"><div class="options"><div class="option"><select class="select-field w-select" aria-label="Select size" data-variant-select=""><option value="">Select size</option><option value="S-120g" data-price="$ 15.00 USD" data-image="../assets/imported/5894ff17e9d3-699fc0477abec580374dc725_Oak___Amber_1.webp">S-120g</option><option value="M-220g" data-price="$ 17.00 USD" data-image="../assets/imported/5894ff17e9d3-699fc0477abec580374dc725_Oak___Amber_1.webp">M-220g</option><option value="L-350g" data-price="$ 20.00 USD" data-image="../assets/imported/5894ff17e9d3-699fc0477abec580374dc725_Oak___Amber_1.webp">L-350g</option></select></div></div><button type="button" class="w-commerce-commerceaddtocartbutton add-to-cart-button catalogue-only" disabled="" title="Online ordering is not available">Catalogue only</button></div></div>
+        <div class="space _24px"></div>
+        <h6 class="light-text">Free shipping on orders over $200 USD and free returns on all orders.</h6>
+      </div>
+    </div>
+  </section>
+  <section class="footer">
+    <div class="footer-grid">
+      <div id="w-node-fa5bfe3e-4fa7-52ea-83f5-221f6a785190-6a78518e" class="footer-item">
+        <div class="block">
+          <h6>FUND US</h6>
+          <a href="#" class="footer-link w-inline-block">
+            <div>800 Hammersmith Street, Melbourne, VIC 3000</div>
+          </a>
+        </div>
+        <div class="block">
+          <h6>OPEN</h6>
+          <div>MON-SAT — 10:00AM - 6:00PM<br>SUNDAYS — 12:00PM - 5:00PM</div>
+        </div>
+        <div class="block">
+          <h6>CONTACT</h6>
+          <a href="#" class="footer-link w-inline-block">
+            <div>+61 234 567 89</div>
+          </a>
+          <a href="#" class="footer-link w-inline-block">
+            <div>help@mediterraneacandles.com</div>
+          </a>
+        </div>
+        <div class="block">
+          <h6>PRESS</h6>
+          <a href="#" class="footer-link w-inline-block">
+            <div>press@mediterraneacandles.com</div>
+          </a>
+        </div>
+      </div>
+      <div id="w-node-fa5bfe3e-4fa7-52ea-83f5-221f6a7851ad-6a78518e" class="footer-item">
+        <div class="block">
+          <a href="../legal/terms-and-conditions.html" class="footer-link w-inline-block">
+            <div>Terms and Conditions</div>
+          </a>
+          <a href="../legal/returns-and-exchanges.html" class="footer-link w-inline-block">
+            <div>Returns and Exchanges</div>
+          </a>
+          <a href="../legal/shipping-and-handling.html" class="footer-link w-inline-block">
+            <div>Shipping and Handling</div>
+          </a>
+          <a href="../legal/privacy-and-cookies.html" class="footer-link w-inline-block">
+            <div>Privacy and Cookies</div>
+          </a>
+        </div>
+      </div>
+      <div class="footer-item">
+        <div>Sign up to our newsletter<br>Never miss an update:</div>
+        <div class="subsribe w-form">
+          <div class="subscribe-block" role="group" aria-label="Newsletter — subscription is currently unavailable"><input class="text-field w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your Email" type="email" id="email-2" required="" disabled="" title="Newsletter subscription is currently unavailable"><input type="submit" data-wait="Please wait..." class="submit-button w-button" value="Submit" disabled="" title="Newsletter subscription is currently unavailable"></div>
+          <div class="success-message w-form-done">
+            <div>😄 You&#x27;re subscribed! </div>
+          </div>
+          <div class="error-message w-form-fail">
+            <div>Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="space _96px"></div>
+    <div class="footer-grid">
+      <div id="w-node-fa5bfe3e-4fa7-52ea-83f5-221f6a7851d9-6a78518e" class="footer-item">
+        <a href="#" class="menu-logo w-inline-block"><img src="../images/logo_negative.svg" loading="lazy" alt="" class="logo-image"></a>
+      </div>
+      <div id="w-node-fa5bfe3e-4fa7-52ea-83f5-221f6a7851dc-6a78518e" class="footer-item">
+        <div class="block">
+          <a href="#" class="footer-link w-inline-block">
+            <div>Instagram</div>
+          </a>
+          <a href="#" class="footer-link w-inline-block">
+            <div>YouTube</div>
+          </a>
+          <a href="#" class="footer-link w-inline-block">
+            <div>TikTok</div>
+          </a>
+          <a href="#" class="footer-link w-inline-block">
+            <div>Facebook</div>
+          </a>
+          <a href="#" class="footer-link w-inline-block">
+            <div>Twitter</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="../assets/imported/7c306d8016b6-jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../js/webflow.js" type="text/javascript"></script>
+<script src="../js/catalogue.js" defer></script></body>
+</html>

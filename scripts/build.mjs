@@ -85,7 +85,8 @@ function finalize(doc,rel,title,prefix='',staticNested=false){
     if(prefix&&!staticNested&&node.attrs.srcset)node.attrs.srcset=node.attrs.srcset.split(',').map(s=>s.trim().startsWith('http')?s:prefix+s.trim()).join(', ');
     if(prefix&&!staticNested)for(const child of node.children){if(child.raw?.startsWith('<script'))child.raw=child.raw.replace(/src="(?![a-z]+:|\/)([^"]+)"/gi,(_,url)=>`src="${prefix}${url}"`);}
   }
-  tag(doc,'head').children.push(...parse(`<link rel="stylesheet" href="${prefix}css/catalogue.css">`).children);
+  const catalogueStyles=rel==='index.html'?'catalogue.css?v=2':'catalogue.css';
+  tag(doc,'head').children.push(...parse(`<link rel="stylesheet" href="${prefix}css/${catalogueStyles}">`).children);
   tag(doc,'body').children.push(...parse(`<script src="${prefix}js/catalogue.js" defer></script>`).children);
   const file=path.join(root,rel);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,render(doc));
 }

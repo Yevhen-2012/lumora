@@ -70,6 +70,8 @@ function finalize(doc,rel,title,prefix='',staticNested=false){
   text(tag(doc,'title'),`${title} | Lumora`);
   for(const cart of all(doc,'cart')){
     const button=one(cart,'w-commerce-commercecartopenlink');if(!button)continue;
+    button.children=button.children.filter(child=>
+      !has(child,'w-commerce-commercecartopenlinkcount')&&(child.tag||child.raw?.trim()));
     button.attrs={class:'w-commerce-commercecartopenlink navigation-link w-inline-block catalogue-bag',role:'button','aria-disabled':'true',title:'Catalogue only — online checkout is unavailable'};
     cart.attrs={class:'w-commerce-commercecartwrapper cart'};cart.children=[button];
   }

@@ -4,3 +4,14 @@
 .subscribe-block input:disabled{opacity:1;cursor:not-allowed}
 [data-product-name][hidden]{display:none!important}
 .catalogue-search-empty{padding:24px 0}
+
+@media screen and (min-width: 992px) {
+  .home {
+    margin-top: 0;
+  }
+
+  .home > .menu {
+    position: fixed;
+    inset: 0 0 auto;
+  }
+}

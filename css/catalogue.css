@@ -1,5 +1,9 @@
 /* Original Webflow CSS owns layout and typography. */
 .catalogue-bag{cursor:not-allowed}
+.catalogue-bag .cart-quantity {
+  font-family: Consolas, Menlo, "DejaVu Sans Mono", monospace;
+  font-variant-numeric: slashed-zero;
+}
 .catalogue-only:disabled{opacity:1;cursor:not-allowed}
 .subscribe-block input:disabled{opacity:1;cursor:not-allowed}
 [data-product-name][hidden]{display:none!important}

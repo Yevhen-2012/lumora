@@ -25,11 +25,11 @@
     flex-shrink: 0;
     flex-basis: calc((100% - (4 * 16px)) / 6); /* Adjusted for 6 item spaces */
 }
-/* Selecting the 3rd, 5th, 7th, and 9th items specifically */
-.product-wrapper-item:nth-child(3),
-.product-wrapper-item:nth-child(5),
-.product-wrapper-item:nth-child(7),
-.product-wrapper-item:nth-child(9) {
+/* Repeat the larger-card pattern across all rows. */
+.product-wrapper-item:nth-child(10n + 3),
+.product-wrapper-item:nth-child(10n + 5),
+.product-wrapper-item:nth-child(10n + 7),
+.product-wrapper-item:nth-child(10n + 9) {
     /* 'Large' items */
     flex-grow: 1;
     flex-shrink: 0;
@@ -65,10 +65,10 @@
         flex-basis: calc((100% - 16px) / 2); /* 1 gap in a row, divided by 2 */
     }
     /* Reset the styles for 'large' items on mobile */
-    .product-wrapper-item:nth-child(3),
-    .product-wrapper-item:nth-child(5),
-    .product-wrapper-item:nth-child(7),
-    .product-wrapper-item:nth-child(9) {
+    .product-wrapper-item:nth-child(10n + 3),
+    .product-wrapper-item:nth-child(10n + 5),
+    .product-wrapper-item:nth-child(10n + 7),
+    .product-wrapper-item:nth-child(10n + 9) {
         flex-basis: calc((100% - 16px) / 2); /* Same as regular items on mobile */
     }
 }

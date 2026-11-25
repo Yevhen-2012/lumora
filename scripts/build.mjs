@@ -91,8 +91,19 @@ function finalize(doc,rel,title,prefix='',staticNested=false){
   const file=path.join(root,rel);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,render(doc));
 }
 let doc=source('index.html');fillCollections(doc,collections.slice(0,2));fillProducts(doc,products);fillJournals(doc,journals);
-// This featured-product selection is empty on the published original.
-html(one(doc,'feature-product-container'),'<div class="w-dyn-empty"><div>No items found.</div></div>');finalize(doc,'index.html','Home');
+// Reuse the catalogue cards for the three featured demo products.
+const featuredHandles = ['velvet-rose', 'saffron-dusk', 'noir-vanilla'];
+const featuredProducts = featuredHandles.map(handle => {
+  const product = products.find(item => item['Product Handle'] === handle);
+  if (!product) throw new Error(`Missing featured product: ${handle}`);
+  return product;
+});
+const featuredTemplate = source('index.html');
+fillProducts(featuredTemplate, featuredProducts);
+const featuredCards = render(one(featuredTemplate, 'product-wrapper-masonry'))
+  .replace(/ id="w-node-[^"]+"/g, '');
+html(one(doc, 'feature-product-container'), `<div class="section-headline"><h4>Featured products</h4></div>${featuredCards}`);
+finalize(doc,'index.html','Home');
 for(const name of ['shop.html','shop-02.html']){
   doc=source(name);fillProducts(doc,products);
   repeat(doc,'laundry-list-wrapper',collections,(item,c)=>{attr(tag(item,'a'),'href',linkCollection(c));text(tag(item,'h6'),c.Name);});

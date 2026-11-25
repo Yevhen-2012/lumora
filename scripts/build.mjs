@@ -90,7 +90,7 @@ function finalize(doc,rel,title,prefix='',staticNested=false){
   tag(doc,'body').children.push(...parse(`<script src="${prefix}js/catalogue.js" defer></script>`).children);
   const file=path.join(root,rel);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,render(doc));
 }
-let doc=source('index.html');fillCollections(doc,collections.slice(0,2));fillProducts(doc,products);fillJournals(doc,journals);
+let doc=source('index.html');fillCollections(doc,collections.slice(0,2));fillProducts(doc,products.filter(p=>p['Product Handle']!=='terracotta-spice'));fillJournals(doc,journals);
 // Reuse the catalogue cards for the three featured demo products.
 const featuredHandles = ['velvet-rose', 'saffron-dusk', 'noir-vanilla'];
 const featuredProducts = featuredHandles.map(handle => {
